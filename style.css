@@ -1,0 +1,319 @@
+/* ---------- THEME VARIABLES ---------- */
+
+:root{
+--primary-color:#0069d9;
+--secondary-color:#17a2b8;
+--background-color:#f8f9fa;
+--text-color:#212529;
+--header-bg:#ffffff;
+--footer-bg:#343a40;
+}
+
+/* ---------- BASE ---------- */
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+color:var(--text-color);
+background:var(--background-color);
+}
+
+a{
+text-decoration:none;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+background:var(--header-bg);
+transition:background .3s, box-shadow .3s;
+}
+
+.navbar.scrolled{
+background:rgba(255,255,255,0.95);
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link{
+color:var(--primary-color);
+font-weight:500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+color:var(--secondary-color);
+}
+
+.navbar-brand{
+color:var(--primary-color)!important;
+font-weight:700;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+/* ---------- HERO SECTION ---------- */
+
+#hero{
+position:relative;
+height:100vh;
+
+/* hero background image */
+background-image:
+url("https://picsum.photos/1920/1080?50");
+
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+
+display:flex;
+align-items:center;
+}
+
+/* canvas background animation */
+
+#hero-canvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+opacity:0.5;
+pointer-events:none;
+}
+
+/* overlay for readability */
+
+#hero .overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1;
+}
+
+/* hero content */
+
+.hero-content{
+position:relative;
+z-index:2;
+animation:fadeIn 1.2s ease-out;
+}
+
+/* overlay for readability */
+
+#hero .overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:1;
+}
+
+/* hero content */
+
+.hero-content{
+position:relative;
+z-index:2;
+animation:fadeIn 1.2s ease-out;
+}
+
+/* animation */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* hero text */
+
+#hero h1{
+font-size:2.6rem;
+font-weight:700;
+color:#ffffff;
+text-shadow:0 4px 15px rgba(0,0,0,0.8);
+}
+
+#hero p{
+font-size:1.2rem;
+color:#f1f1f1;
+text-shadow:0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* hero buttons */
+
+#hero .btn{
+transition:transform .3s, box-shadow .3s;
+}
+
+#hero .btn:hover{
+transform:translateY(-2px);
+box-shadow:0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* button colors */
+
+.btn-primary{
+background:var(--primary-color);
+border-color:var(--primary-color);
+}
+
+.btn-primary:hover{
+background:var(--secondary-color);
+border-color:var(--secondary-color);
+}
+
+.btn-outline-light{
+color:#fff;
+border-color:#fff;
+}
+
+.btn-outline-light:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* ---------- MOBILE HERO ---------- */
+
+@media(max-width:768px){
+
+#hero h1{
+font-size:2rem;
+}
+
+.hero-content{
+text-align:center;
+}
+
+}
+
+/* ---------- CTA WRAPPER ---------- */
+
+.cta-wrap{
+display:inline-block;
+}
+
+/* ---------- OWNER SECTION ---------- */
+
+#about{
+padding-top:60px;
+padding-bottom:60px;
+background:#fff;
+}
+
+.about-card{
+background:#fff;
+border:none;
+border-radius:1rem;
+}
+
+.founder-img{
+max-width:200px;
+transition:transform .3s ease;
+}
+
+.founder-img:hover{
+transform:scale(1.05);
+}
+
+.about-text{
+font-size:1rem;
+line-height:1.6;
+color:#333;
+}
+
+@media(max-width:767px){
+
+.about-card .row > div{
+text-align:center;
+}
+
+.about-card .row > .col-md-4{
+order:-1;
+}
+
+}
+
+/* ---------- COURSES ---------- */
+
+.course-card{
+transition:transform .3s, box-shadow .3s;
+}
+
+.course-card:hover{
+transform:translateY(-10px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery-img{
+width:100%;
+height:200px;          /* fixed height */
+object-fit:cover;      /* crop to fill */
+transition:transform .3s;
+display:block;
+}
+
+.gallery-img:hover{
+transform:scale(1.05);
+}
+
+/* ---------- COUNTERS ---------- */
+
+.counter{
+font-size:2.5rem;
+font-weight:700;
+color:var(--primary-color);
+}
+
+/* ---------- CTA ---------- */
+
+#cta{
+background:var(--primary-color);
+}
+
+#cta h2{
+font-weight:600;
+}
+
+/* ---------- CONTACT ---------- */
+
+#contact-preview a{
+color:var(--primary-color);
+}
+
+#contact-preview a:hover{
+text-decoration:underline;
+}
+
+/* ---------- WHATSAPP BUTTON ---------- */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px;
+border-radius:50%;
+z-index:1000;
+transition:transform .3s;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+}
